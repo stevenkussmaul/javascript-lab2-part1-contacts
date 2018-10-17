@@ -16,13 +16,12 @@ class addressBook {
         console.log(this.contactListArray);
 
     }
-    print(printPosition) {
-        console.log(this.contactListArray[printPosition]);
+    print() {
 
-        // for (let contact of this.contactListArray) {
-        //     if (contact === printPosition) {
-        //     }
-        // }
+        for (let contact of this.contactListArray) {
+            console.log(contact);
+
+        }
     }
 
 }
@@ -45,10 +44,10 @@ while(true) {
     let Choice= prompt("would you like to add, delete print or quit?")
 
     if (Choice === "add") {
-        let name = "joe" //prompt ("enter a name");
-        let email = "email@gmail.com" //prompt ("enter email");
-        let phone = "867-5309" //prompt ("enter a phone");
-        let relation = "uncle" //prompt ("enter a relation");
+        let name = prompt ("enter a name");
+        let email = prompt ("enter email");
+        let phone = prompt ("enter a phone");
+        let relation = prompt ("enter a relation");
         myAddressBook.add(new contact(name,email,phone,relation));
 
     } else if (Choice === "delete") { 
@@ -56,8 +55,8 @@ while(true) {
         myAddressBook.deleteAt(indexPositionToDelete);
 
     } else if (Choice === "print") {
-        let indexPostionToPrint= prompt("enter a position to print");
-        myAddressBook.print(indexPostionToPrint);
+        // let indexPostionToPrint= prompt("enter a position to print");
+        myAddressBook.print();
 
     } else if (Choice === "quit") {
         break;
