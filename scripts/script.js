@@ -48,7 +48,9 @@ while(true) {
         let email = prompt ("enter email");
         let phone = prompt ("enter a phone");
         let relation = prompt ("enter a relation");
-        myAddressBook.add(new contact(name,email,phone,relation));
+
+        const var1 = new contact(name,email,phone,relation);
+        myAddressBook.add(var1);
 
     } else if (Choice === "delete") { 
         let indexPositionToDelete = prompt("enter a position to delete");
